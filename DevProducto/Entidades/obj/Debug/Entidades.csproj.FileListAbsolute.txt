@@ -1,0 +1,12 @@
+C:\Users\xxxxx\source\repos\DevProducto\Entidades\bin\Debug\Entidades.dll
+C:\Users\xxxxx\source\repos\DevProducto\Entidades\bin\Debug\Entidades.pdb
+C:\Users\xxxxx\source\repos\DevProducto\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\xxxxx\source\repos\DevProducto\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\xxxxx\source\repos\DevProducto\Entidades\obj\Debug\Entidades.dll
+C:\Users\xxxxx\source\repos\DevProducto\Entidades\obj\Debug\Entidades.pdb
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\bin\Debug\Entidades.dll
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\bin\Debug\Entidades.pdb
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\obj\Debug\Entidades.dll
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\obj\Debug\Entidades.pdb

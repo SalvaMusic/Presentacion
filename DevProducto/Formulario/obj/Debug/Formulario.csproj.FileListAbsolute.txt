@@ -1,0 +1,14 @@
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Formulario.exe.config
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Formulario.exe
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Formulario.pdb
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Entidades.dll
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Entidades.pdb
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.csprojAssemblyReference.cache
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.Properties.Resources.resources
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.csproj.GenerateResource.cache
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.csproj.CoreCompileInputs.cache
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.csproj.CopyComplete
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.exe
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.pdb
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.FormAccesoCliente.resources
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.FormRegistrarse.resources
