@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAccesoCliente));
             this.labelNroCliente = new System.Windows.Forms.Label();
             this.labelDocumento = new System.Windows.Forms.Label();
             this.maskTxtNCliente = new System.Windows.Forms.MaskedTextBox();
@@ -39,7 +40,7 @@
             // labelNroCliente
             // 
             this.labelNroCliente.AutoSize = true;
-            this.labelNroCliente.Location = new System.Drawing.Point(62, 58);
+            this.labelNroCliente.Location = new System.Drawing.Point(74, 58);
             this.labelNroCliente.Name = "labelNroCliente";
             this.labelNroCliente.Size = new System.Drawing.Size(54, 13);
             this.labelNroCliente.TabIndex = 0;
@@ -48,7 +49,7 @@
             // labelDocumento
             // 
             this.labelDocumento.AutoSize = true;
-            this.labelDocumento.Location = new System.Drawing.Point(62, 96);
+            this.labelDocumento.Location = new System.Drawing.Point(74, 96);
             this.labelDocumento.Name = "labelDocumento";
             this.labelDocumento.Size = new System.Drawing.Size(62, 13);
             this.labelDocumento.TabIndex = 0;
@@ -56,21 +57,21 @@
             // 
             // maskTxtNCliente
             // 
-            this.maskTxtNCliente.Location = new System.Drawing.Point(135, 56);
+            this.maskTxtNCliente.Location = new System.Drawing.Point(147, 56);
             this.maskTxtNCliente.Name = "maskTxtNCliente";
             this.maskTxtNCliente.Size = new System.Drawing.Size(127, 20);
             this.maskTxtNCliente.TabIndex = 0;
             // 
             // maskTxtDocumento
             // 
-            this.maskTxtDocumento.Location = new System.Drawing.Point(135, 92);
+            this.maskTxtDocumento.Location = new System.Drawing.Point(147, 92);
             this.maskTxtDocumento.Name = "maskTxtDocumento";
             this.maskTxtDocumento.Size = new System.Drawing.Size(127, 20);
             this.maskTxtDocumento.TabIndex = 1;
             // 
             // buttonIngresar
             // 
-            this.buttonIngresar.Location = new System.Drawing.Point(172, 131);
+            this.buttonIngresar.Location = new System.Drawing.Point(184, 131);
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(75, 23);
             this.buttonIngresar.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             // buttonRegistrarse
             // 
-            this.buttonRegistrarse.Location = new System.Drawing.Point(74, 131);
+            this.buttonRegistrarse.Location = new System.Drawing.Point(86, 131);
             this.buttonRegistrarse.Name = "buttonRegistrarse";
             this.buttonRegistrarse.Size = new System.Drawing.Size(75, 23);
             this.buttonRegistrarse.TabIndex = 3;
@@ -90,8 +91,10 @@
             // 
             // FormAccesoCliente
             // 
+            this.AcceptButton = this.buttonIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(362, 203);
             this.Controls.Add(this.buttonRegistrarse);
             this.Controls.Add(this.buttonIngresar);
@@ -100,9 +103,15 @@
             this.Controls.Add(this.labelDocumento);
             this.Controls.Add(this.labelNroCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(378, 242);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(378, 242);
             this.Name = "FormAccesoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceco Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAccesoCliente_FormClosing);
             this.Load += new System.EventHandler(this.FormAccesoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

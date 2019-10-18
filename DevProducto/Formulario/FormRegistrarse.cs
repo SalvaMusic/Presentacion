@@ -44,7 +44,7 @@ namespace Formulario
                          
             Cliente c1 = new Cliente(textBoxDomicilio.Text, CondIva, TDocumento, maskTxtDocuRegistrarse.Text);
             
-            MessageBox.Show("Cliente registrado con éxito!!");
+            MessageBox.Show("N° Cliente: " + c1.NroCliente);
             pasarCliente(c1);
             this.Dispose();
 

@@ -18,3 +18,5 @@ C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\DevProduct
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\DevProducto\obj\Debug\DevProducto.csproj.CopyComplete
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\DevProducto\obj\Debug\DevProducto.exe
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\DevProducto\obj\Debug\DevProducto.pdb
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\DevProducto\bin\Debug\Archivos.dll
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\DevProducto\bin\Debug\Archivos.pdb

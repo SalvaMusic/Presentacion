@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistrarse));
             this.labelTDocumento = new System.Windows.Forms.Label();
             this.labelNDocumento = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -118,6 +119,7 @@
             // 
             // FormRegistrarse
             // 
+            this.AcceptButton = this.buttonRegistrarse;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 246);
@@ -130,6 +132,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelNDocumento);
             this.Controls.Add(this.labelTDocumento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(441, 285);
             this.Name = "FormRegistrarse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrarse";

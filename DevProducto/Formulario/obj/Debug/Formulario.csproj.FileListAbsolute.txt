@@ -12,3 +12,10 @@ C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.pdb
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.FormAccesoCliente.resources
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.FormRegistrarse.resources
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.FormPedido.resources
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.FormFacturacion.resources
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\obj\Debug\Formulario.Menu.resources
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Archivos.dll
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Formulario\bin\Debug\Archivos.pdb

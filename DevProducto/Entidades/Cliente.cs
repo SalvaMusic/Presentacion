@@ -4,22 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Entidades
 {
     public enum TDocum { DNI, CUIT }
     public enum CIva { Monotrivutista, IVA_Responsable_Inscripto, IVA_No_Responsable }
-
+    [Serializable]
     public class Cliente
     {
-        protected static int nroCliente;
-        protected string domicilio;
-        protected CIva condIva;
-        protected TDocum tipoDocu;
-        protected string nroDocu;
+        public static int nroCliStatic;
+        private int nroCliente;
+        private string domicilio;
+        private CIva condIva;
+        private TDocum tipoDocu;
+        private string nroDocu;
+
+        private Cliente() { }
 
         public Cliente(string domicilio, CIva condIva, TDocum tipoDocu, string nroDocu)
         {
-            Cliente.nroCliente++;
+            this.nroCliente = Cliente.nroCliStatic++;
             this.domicilio = domicilio;
             this.condIva = condIva;
             this.tipoDocu = tipoDocu;
@@ -35,25 +39,51 @@ namespace Entidades
             return str.ToString();
         }
 
+        private float calcularPorcentaje()
+        {
+            float porc = 70;
+            switch (this.CondIva)
+            {
+                case CIva.IVA_Responsable_Inscripto:
+                    porc = (float)10.05;
+                    break;
+                case CIva.Monotrivutista:
+                    porc = 21;
+                    break;
+            }
+            return porc;
+        }
+
+
+        public float Porc
+        {
+            get { return calcularPorcentaje(); }
+        }
+
         public int NroCliente
         {
             get { return nroCliente; }
+            set { nroCliente = value; }
         }
         public string Domicilio
         {
             get { return domicilio; }
+            set { domicilio = value; }
         }
         public CIva CondIva
         {
             get { return condIva; }
+            set { condIva = value; }
         }
         public TDocum TipoDocu
         {
             get { return tipoDocu; }
+            set { tipoDocu = value; }
         }
         public string NroDocu
         {
             get { return nroDocu; }
+            set { nroDocu = value; }
         }
 
     }

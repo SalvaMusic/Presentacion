@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulario", "Formulario\Formulario.csproj", "{F9D04CB0-2613-4EBF-85CE-AEB2CAFE61FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archivos.csproj", "{4E894E93-38D5-4768-A7DB-3F38A44FBC1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F9D04CB0-2613-4EBF-85CE-AEB2CAFE61FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9D04CB0-2613-4EBF-85CE-AEB2CAFE61FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9D04CB0-2613-4EBF-85CE-AEB2CAFE61FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E894E93-38D5-4768-A7DB-3F38A44FBC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E894E93-38D5-4768-A7DB-3F38A44FBC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E894E93-38D5-4768-A7DB-3F38A44FBC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E894E93-38D5-4768-A7DB-3F38A44FBC1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
