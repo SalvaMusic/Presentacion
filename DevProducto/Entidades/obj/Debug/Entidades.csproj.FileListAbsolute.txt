@@ -15,3 +15,14 @@ C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\bin\Debug\Newtonsoft.Json.xml
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\bin\Debug\Entidades.dll
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\bin\Debug\Entidades.pdb
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\bin\Debug\Archivos.dll
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\bin\Debug\Archivos.pdb
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\obj\Debug\Entidades.dll
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Entidades\obj\Debug\Entidades.pdb

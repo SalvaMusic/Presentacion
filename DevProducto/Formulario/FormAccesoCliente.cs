@@ -17,6 +17,8 @@ namespace Formulario
     {
         List<Cliente> listaClientes;
         Xml<List<Cliente>> xml;
+        bool registro = false;
+        string pathXml = "Datos\\Clientes.Xml";
         public FormAccesoCliente()
         {
             InitializeComponent();
@@ -28,11 +30,7 @@ namespace Formulario
         {
             try
             {
-                if (File.Exists("Datos\\Clientes.Xml"))
-                {
-                    xml.Leer("Datos\\Clientes.Xml", out listaClientes);
-                    Cliente.nroCliStatic = listaClientes.Count;
-                }
+                cargarCLientesXml();
             }
             catch (Exception ex)
             {
@@ -80,7 +78,8 @@ namespace Formulario
 
         private void buttonRegistrarse_Click(object sender, EventArgs e)
         {
-
+            maskTxtDocumento.Text = "";
+            maskTxtNCliente.Text = "";
             //this.Hide();
             FormRegistrarse p = new FormRegistrarse();
             p.pasarCliente += new FormRegistrarse.pasar(tomarCliente);
@@ -91,11 +90,31 @@ namespace Formulario
         private void tomarCliente(Cliente c)
         {
             listaClientes.Add(c);
+            registro = true;
         }
 
         private void FormAccesoCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
-            xml.Guardar("Datos\\Clientes.Xml", listaClientes);
+            if (registro)
+            {
+                try
+                {
+                    xml.Guardar(pathXml, listaClientes);
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+
+        private void cargarCLientesXml()
+        {
+            if (File.Exists(pathXml))
+            {
+                xml.Leer(pathXml, out listaClientes);
+                Cliente.nroCliStatic = listaClientes[listaClientes.Count - 1].NroCliente;
+            }
         }
     }
 }

@@ -8,31 +8,44 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using Archivos;
+using System.IO;
 
 namespace Formulario
 {
     public partial class FormPedido : Form
     {
+        List<Pedido> listaPedidos;
         List<Producto> listaProductos;
-        Cliente cliente = null;
+        Cliente cliente;
         Pedido pedido;
-      
+        Xml<List<Pedido>> xml;
+        string pathXml = "Datos\\Pedidos.Xml";
+        bool registro = false;
+
         public FormPedido(Cliente c)
         {
             InitializeComponent();
+            listaPedidos = new List<Pedido>();
             listaProductos = new List<Producto>();
             cliente = c;
         }
 
         private void FormPedido_Load(object sender, EventArgs e)
         {
-            cargaAutomaticaPedidos();
-            cargaPedidosListBox();
-            mtxtCantidad.Text = "";
+            try
+            {
+                cargaAutomaticaProductos();
+                cargaProductosdGVProdPedir();
+                mtxtCantidad.Text = "";
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
-        private void cargaAutomaticaPedidos()
+        private void cargaAutomaticaProductos()
         {
             listaProductos.Add(new Producto("2526", "Cuerdas de Guitarra", 150));
             listaProductos.Add(new Producto("2527", "Puas de Guitarra", 50));
@@ -44,11 +57,11 @@ namespace Formulario
             listaProductos.Add(new Producto("8529", "Bafles de Bajo", 15000));
         }
 
-        private void cargaPedidosListBox()
+        private void cargaProductosdGVProdPedir()
         {
             foreach (Producto p in listaProductos)
             {
-                dataGridViewProdPedir.Rows.Add(p.Codigo, p.Nombre, p.Precio);
+                dGVProdPedir.Rows.Add(p.Codigo, p.Nombre, p.Precio);
             }
         }
 
@@ -65,25 +78,22 @@ namespace Formulario
             }
             else
             {
-                dataGridViewPrePedido.Rows.Add(lblCodigo.Text, mtxtCantidad.Text);
+                dGVPrePedido.Rows.Add(lblCodigo.Text, mtxtCantidad.Text);
                 lblCodigo.Text = "";
                 mtxtCantidad.Text = "";
             }
-            
-
         }
       
-
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
             List<Producto> prodPedido = new List<Producto>();
-            for (int i = 0; i< dataGridViewPrePedido.Rows.Count -1; i++)
+            for (int i = 0; i< dGVPrePedido.Rows.Count -1; i++)
             {
                 foreach(Producto p in listaProductos)
                 {
-                    if (dataGridViewPrePedido.Rows[i].Cells[0].Value.ToString() == p.Codigo)
+                    if (dGVPrePedido.Rows[i].Cells[0].Value.ToString() == p.Codigo)
                     {
-                        p.Cantidad = Convert.ToInt16(dataGridViewPrePedido.Rows[i].Cells[1].Value.ToString());
+                        p.Cantidad = Convert.ToInt16(dGVPrePedido.Rows[i].Cells[1].Value.ToString());
                         prodPedido.Add(p);
                         break;
                     }
@@ -93,31 +103,48 @@ namespace Formulario
             if (MessageBox.Show("TOTAL BRUTO: "+pedido.TotalBrutoPedido,"Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 pedido.Estado = Estado.Pendiente;
+                listaPedidos.Add(pedido);
+                registro = true;
                 MessageBox.Show("Pedido cargado en estado 'Pendiente'", "Confirmado", MessageBoxButtons.OK, MessageBoxIcon.None);
+                
                 this.Close();
             }
         }
 
-        private void txtProductoAgregar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewProdPedir_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGVProdPedir_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int n = e.RowIndex;
 
             if (n != -1)
             {
-                lblCodigo.Text = dataGridViewProdPedir.Rows[n].Cells[0].Value.ToString();
+                lblCodigo.Text = dGVProdPedir.Rows[n].Cells[0].Value.ToString();
                 mtxtCantidad.Focus();
             }
-                 
+        }
+
+        private void FormPedido_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (registro)
+            {
+                try
+                {
+                    xml.Guardar(pathXml, listaPedidos);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
+        }
+
+        private void cargarPedidosXml()
+        {
+            if (File.Exists(pathXml))
+            {
+                xml.Leer(pathXml, out  listaPedidos);
+                Pedido.nroPedStatic = listaPedidos[listaPedidos.Count - 1].NroPedido;
+            }
         }
     }
 }

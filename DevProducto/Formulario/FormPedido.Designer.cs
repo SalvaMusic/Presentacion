@@ -33,18 +33,18 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirmarPedido = new System.Windows.Forms.Button();
-            this.dataGridViewProdPedir = new System.Windows.Forms.DataGridView();
+            this.dGVProdPedir = new System.Windows.Forms.DataGridView();
             this.ColumnCódigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTCodigo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mtxtCantidad = new System.Windows.Forms.MaskedTextBox();
-            this.dataGridViewPrePedido = new System.Windows.Forms.DataGridView();
+            this.dGVPrePedido = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdPedir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrePedido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVProdPedir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVPrePedido)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregarProducto
@@ -64,7 +64,6 @@
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(0, 13);
             this.lblCodigo.TabIndex = 4;
-            this.lblCodigo.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -85,18 +84,18 @@
             this.btnConfirmarPedido.UseVisualStyleBackColor = true;
             this.btnConfirmarPedido.Click += new System.EventHandler(this.btnConfirmarPedido_Click);
             // 
-            // dataGridViewProdPedir
+            // dGVProdPedir
             // 
-            this.dataGridViewProdPedir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProdPedir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGVProdPedir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVProdPedir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCódigo,
             this.ColumnProducto,
             this.ColumnPrecio});
-            this.dataGridViewProdPedir.Location = new System.Drawing.Point(12, 98);
-            this.dataGridViewProdPedir.Name = "dataGridViewProdPedir";
-            this.dataGridViewProdPedir.Size = new System.Drawing.Size(414, 196);
-            this.dataGridViewProdPedir.TabIndex = 6;
-            this.dataGridViewProdPedir.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdPedir_CellClick);
+            this.dGVProdPedir.Location = new System.Drawing.Point(12, 98);
+            this.dGVProdPedir.Name = "dGVProdPedir";
+            this.dGVProdPedir.Size = new System.Drawing.Size(414, 196);
+            this.dGVProdPedir.TabIndex = 6;
+            this.dGVProdPedir.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdPedir_CellClick);
             // 
             // ColumnCódigo
             // 
@@ -123,7 +122,6 @@
             this.lblTCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblTCodigo.TabIndex = 4;
             this.lblTCodigo.Text = "Codigo";
-            this.lblTCodigo.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -133,7 +131,6 @@
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cantidad";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // mtxtCantidad
             // 
@@ -144,17 +141,17 @@
             this.mtxtCantidad.TabIndex = 2;
             this.mtxtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dataGridViewPrePedido
+            // dGVPrePedido
             // 
-            this.dataGridViewPrePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPrePedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGVPrePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVPrePedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridViewPrePedido.Location = new System.Drawing.Point(432, 98);
-            this.dataGridViewPrePedido.Name = "dataGridViewPrePedido";
-            this.dataGridViewPrePedido.Size = new System.Drawing.Size(183, 196);
-            this.dataGridViewPrePedido.TabIndex = 6;
-            this.dataGridViewPrePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdPedir_CellClick);
+            this.dGVPrePedido.Location = new System.Drawing.Point(432, 98);
+            this.dGVPrePedido.Name = "dGVPrePedido";
+            this.dGVPrePedido.Size = new System.Drawing.Size(183, 196);
+            this.dGVPrePedido.TabIndex = 6;
+            this.dGVPrePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdPedir_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -175,8 +172,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 384);
             this.Controls.Add(this.mtxtCantidad);
-            this.Controls.Add(this.dataGridViewPrePedido);
-            this.Controls.Add(this.dataGridViewProdPedir);
+            this.Controls.Add(this.dGVPrePedido);
+            this.Controls.Add(this.dGVProdPedir);
             this.Controls.Add(this.btnConfirmarPedido);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -190,8 +187,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPedido";
             this.Load += new System.EventHandler(this.FormPedido_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdPedir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrePedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVProdPedir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVPrePedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,14 +199,14 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnConfirmarPedido;
-        private System.Windows.Forms.DataGridView dataGridViewProdPedir;
+        private System.Windows.Forms.DataGridView dGVProdPedir;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCódigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrecio;
         private System.Windows.Forms.Label lblTCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox mtxtCantidad;
-        private System.Windows.Forms.DataGridView dataGridViewPrePedido;
+        private System.Windows.Forms.DataGridView dGVPrePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }

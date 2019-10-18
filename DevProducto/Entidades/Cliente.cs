@@ -23,7 +23,8 @@ namespace Entidades
 
         public Cliente(string domicilio, CIva condIva, TDocum tipoDocu, string nroDocu)
         {
-            this.nroCliente = Cliente.nroCliStatic++;
+            Cliente.nroCliStatic++;
+            this.nroCliente = Cliente.nroCliStatic;
             this.domicilio = domicilio;
             this.condIva = condIva;
             this.tipoDocu = tipoDocu;

@@ -10,7 +10,7 @@ namespace Entidades
     [Serializable]
     public class Pedido
     {
-        static int nroPedStatic;
+        public static int nroPedStatic;
         private int nroPedido;
         private Cliente cliente;
         private List<Producto> detalles;
