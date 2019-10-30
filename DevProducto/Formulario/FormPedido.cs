@@ -15,6 +15,7 @@ namespace Formulario
 {
     public partial class FormPedido : Form
     {
+        #region Atributos
         List<Pedido> listaPedidos;
         List<Producto> listaProductos;
         Cliente cliente;
@@ -22,15 +23,30 @@ namespace Formulario
         Xml<List<Pedido>> xml;
         string pathXml = "Datos\\Pedidos.Xml";
         bool registro = false;
+        #endregion
 
+        #region Constructores
+
+        /// <summary>
+        /// Constructor, inicializa los atributos.
+        /// </summary>
+        /// <param name="c">Cliente que va a crear el pedido</param>
         public FormPedido(Cliente c)
         {
             InitializeComponent();
             listaPedidos = new List<Pedido>();
             listaProductos = new List<Producto>();
+            xml = new Xml<List<Pedido>>();
             cliente = c;
         }
+        #endregion
 
+        #region Métodos
+        /// <summary>
+        /// Carga los productos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormPedido_Load(object sender, EventArgs e)
         {
             try
@@ -38,13 +54,17 @@ namespace Formulario
                 cargaAutomaticaProductos();
                 cargaProductosdGVProdPedir();
                 mtxtCantidad.Text = "";
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
         }
 
+        /// <summary>
+        /// Crea productos y los agrega a la lista de productos.
+        /// </summary>
         private void cargaAutomaticaProductos()
         {
             listaProductos.Add(new Producto("2526", "Cuerdas de Guitarra", 150));
@@ -57,6 +77,9 @@ namespace Formulario
             listaProductos.Add(new Producto("8529", "Bafles de Bajo", 15000));
         }
 
+        /// <summary>
+        /// Carga los productos de la lista y los agrega a dGVProdPedir.
+        /// </summary>
         private void cargaProductosdGVProdPedir()
         {
             foreach (Producto p in listaProductos)
@@ -65,13 +88,19 @@ namespace Formulario
             }
         }
 
+        /// <summary>
+        /// Método de Evento click, Agrega el producto seleccionado de dGVProdPedir a dGVPrePedido para su proceso de pedido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(lblCodigo.Text))
             {
                 MessageBox.Show("Seleccione Código.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            } else if (String.IsNullOrEmpty(mtxtCantidad.Text))
+            }
+            else if (String.IsNullOrEmpty(mtxtCantidad.Text))
             {
                 MessageBox.Show("Ingrese Cantidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -83,46 +112,72 @@ namespace Formulario
                 mtxtCantidad.Text = "";
             }
         }
-      
+
+        /// <summary>
+        /// Método de Evento Click, si el cliente confirma el pedido lo guarda en un Xml.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirmarPedido_Click(object sender, EventArgs e)
         {
-            List<Producto> prodPedido = new List<Producto>();
-            for (int i = 0; i< dGVPrePedido.Rows.Count -1; i++)
+            try
             {
-                foreach(Producto p in listaProductos)
+                List<Producto> prodPedido = new List<Producto>();
+                for (int i = 0; i < dGVPrePedido.Rows.Count - 1; i++)
                 {
-                    if (dGVPrePedido.Rows[i].Cells[0].Value.ToString() == p.Codigo)
+                    foreach (Producto p in listaProductos)
                     {
-                        p.Cantidad = Convert.ToInt16(dGVPrePedido.Rows[i].Cells[1].Value.ToString());
-                        prodPedido.Add(p);
-                        break;
+                        if (dGVPrePedido.Rows[i].Cells[0].Value.ToString() == p.Codigo)
+                        {
+                            p.Cantidad = Convert.ToInt16(dGVPrePedido.Rows[i].Cells[1].Value.ToString());
+                            prodPedido.Add(p);
+                            break;
+                        }
                     }
                 }
+                pedido = new Pedido(cliente, prodPedido);
+
+                if (MessageBox.Show("TOTAL BRUTO: " + pedido.TotalBrutoPedido, "Confirmación",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    pedido.Estado = Estado.Facturado;
+                    cargarPedidosXml();
+                    listaPedidos.Add(pedido);
+                    registro = true;
+                    MessageBox.Show("Pedido cargado en estado 'Pendiente'", "Confirmado",
+                        MessageBoxButtons.OK, MessageBoxIcon.None);
+                    guardarPedidosXml();
+                    this.Close();
+                }
+
             }
-            pedido = new Pedido(cliente, prodPedido);
-            if (MessageBox.Show("TOTAL BRUTO: "+pedido.TotalBrutoPedido,"Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            catch (Exception ex)
             {
-                pedido.Estado = Estado.Pendiente;
-                listaPedidos.Add(pedido);
-                registro = true;
-                MessageBox.Show("Pedido cargado en estado 'Pendiente'", "Confirmado", MessageBoxButtons.OK, MessageBoxIcon.None);
-                
-                this.Close();
+                MessageBox.Show(ex.Message);
             }
+
         }
 
+        /// <summary>
+        /// Método de evento cell click, muestra el código de producto de la celda celeccionada en un lblCodigo.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dGVProdPedir_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int n = e.RowIndex;
 
-            if (n != -1)
+            if (n != -1 && n < listaProductos.Count)
             {
                 lblCodigo.Text = dGVProdPedir.Rows[n].Cells[0].Value.ToString();
                 mtxtCantidad.Focus();
             }
         }
 
-        private void FormPedido_FormClosing(object sender, FormClosingEventArgs e)
+        /// <summary>
+        /// Guarda los pedidos en un Xml.
+        /// </summary>
+        private void guardarPedidosXml()
         {
             if (registro)
             {
@@ -135,16 +190,24 @@ namespace Formulario
                     MessageBox.Show(ex.Message);
                 }
             }
-            
         }
 
+        /// <summary>
+        /// Carga los pedidos previamente serializados en el Xml y los agrega a la lista de pedidos.
+        /// </summary>
         private void cargarPedidosXml()
         {
             if (File.Exists(pathXml))
             {
-                xml.Leer(pathXml, out  listaPedidos);
-                Pedido.nroPedStatic = listaPedidos[listaPedidos.Count - 1].NroPedido;
+                xml.Leer(pathXml, out listaPedidos);
+                if (listaPedidos.Count > 0)
+                {
+                    Pedido.nroPedStatic = listaPedidos[listaPedidos.Count - 1].NroPedido;
+                }
+
             }
-        }
+        } 
+
+        #endregion
     }
 }

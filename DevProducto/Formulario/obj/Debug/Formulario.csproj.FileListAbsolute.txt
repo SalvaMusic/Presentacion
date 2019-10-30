@@ -29,7 +29,6 @@ C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\bin\Debug\Entidades.pdb
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\bin\Debug\Newtonsoft.Json.xml
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.csprojAssemblyReference.cache
-C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.FormFacturacion.resources
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.FormAccesoCliente.resources
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.FormPedido.resources
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.FormRegistrarse.resources
@@ -40,3 +39,4 @@ C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.csproj.CopyComplete
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.exe
 C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.pdb
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Formulario\obj\Debug\Formulario.FormCancelarPedido.resources

@@ -49,17 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormFacturacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormFacturacion.Designer.cs">
-      <DependentUpon>FormFacturacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAccesoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAccesoCliente.Designer.cs">
       <DependentUpon>FormAccesoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCancelarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCancelarPedido.Designer.cs">
+      <DependentUpon>FormCancelarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPedido.cs">
       <SubType>Form</SubType>
@@ -81,11 +81,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormFacturacion.resx">
-      <DependentUpon>FormFacturacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormAccesoCliente.resx">
       <DependentUpon>FormAccesoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCancelarPedido.resx">
+      <DependentUpon>FormCancelarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>

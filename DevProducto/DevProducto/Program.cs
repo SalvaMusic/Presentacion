@@ -62,7 +62,7 @@ namespace DevProducto
 
             Console.Write("\n\n\n");*/
 
-            NotaCredito nota = new NotaCredito(factura3);
+            NotaCredito nota = new NotaCredito(pedido3);
 
             List<Factura> listaFac = new List<Factura>();
             listaFac.Add(factura);

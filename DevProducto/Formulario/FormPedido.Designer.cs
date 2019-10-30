@@ -95,7 +95,7 @@
             this.dGVProdPedir.Name = "dGVProdPedir";
             this.dGVProdPedir.Size = new System.Drawing.Size(414, 196);
             this.dGVProdPedir.TabIndex = 6;
-            this.dGVProdPedir.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdPedir_CellClick);
+            this.dGVProdPedir.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProdPedir_CellClick);
             // 
             // ColumnCódigo
             // 
@@ -151,7 +151,7 @@
             this.dGVPrePedido.Name = "dGVPrePedido";
             this.dGVPrePedido.Size = new System.Drawing.Size(183, 196);
             this.dGVPrePedido.TabIndex = 6;
-            this.dGVPrePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdPedir_CellClick);
+            this.dGVPrePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProdPedir_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -167,7 +167,7 @@
             // 
             // FormPedido
             // 
-            this.AcceptButton = this.btnConfirmarPedido;
+            this.AcceptButton = this.btnAgregarProducto;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 384);

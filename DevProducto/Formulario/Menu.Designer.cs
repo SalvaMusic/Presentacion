@@ -51,6 +51,7 @@
             this.btnCancelarPedidoMenu.TabIndex = 2;
             this.btnCancelarPedidoMenu.Text = "Cancelar Pedido";
             this.btnCancelarPedidoMenu.UseVisualStyleBackColor = true;
+            this.btnCancelarPedidoMenu.Click += new System.EventHandler(this.btnCancelarPedidoMenu_Click);
             // 
             // btnCrearPedidoMenu
             // 

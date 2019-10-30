@@ -7,26 +7,57 @@ using Archivos;
 
 namespace Entidades
 {
-    public enum Letra { A, B, X }
+    #region Enumeradores
+    /// <summary>
+    /// Enumerador para Letra de factura
+    /// </summary>
+    public enum Letra { A, B, X } 
+    #endregion
+
+
+    /// <summary>
+    /// Clase Factura, Serializable.
+    /// </summary>
     [Serializable]
     public class Factura
     {
+        #region Atributos
         private DateTime fechaEmision;
         private static int nroFacStatic;
         private int nroFactura;
         const int codEmision = 211;
         private Letra letra;
         private Pedido detalles;
+        #endregion
 
+        #region Constructores
+
+        /// <summary>
+        /// Constructor Privado por defecto.
+        /// </summary>
         private Factura() { }
+
+
+        /// <summary>
+        /// Constructor Público con parametros.
+        /// </summary>
+        /// <param name="detalles">Objeto de tipo Pedido a ser asignado</param>
         public Factura(Pedido detalles)
         {
+            Factura.nroFacStatic++;
             this.detalles = detalles;
             this.fechaEmision = DateTime.Today;
-            this.nroFactura = Factura.nroFacStatic++;
+            this.nroFactura = Factura.nroFacStatic;
             this.letra = asignaLetra();
         }
+        #endregion
 
+        #region Métodos
+
+        /// <summary>
+        /// Asigna letra de factura segun condicion impositiva.
+        /// </summary>
+        /// <returns>Letra a ser asignada</returns>
         private Letra asignaLetra()
         {
             Letra retorno = Letra.B;
@@ -42,7 +73,10 @@ namespace Entidades
             return retorno;
         }
 
-
+        /// <summary>
+        /// Override de método ToString.
+        /// </summary>
+        /// <returns>Un obj StrinBuilder con los detalles de la factura</returns>
         public override string ToString()
         {
             StringBuilder str = new StringBuilder();
@@ -61,13 +95,17 @@ namespace Entidades
             return str.ToString();
         }
 
+        /// <summary>
+        /// Método que detalla los datos de los productos.
+        /// </summary>
+        /// <returns>Un obj StrinBuilder con los detalles del pedido</returns>
         private string detallesString()
         {
             StringBuilder str = new StringBuilder();
             str.AppendFormat("{0,6}\t{1,20}\t{2,10} {3,6}  {4}\t {5,10}\t {6,10}\t {7,10}\n",
                 "CODIGO", "NOMBRE", "PRECIO", "CANT", "%IVA", "PRE VENTA", "PRE NETO", "MONTO IVA");
             float mIvaProducto = 0, pNetoProducto = 0, pVentaProducto = 0;
-            
+
             foreach (Producto producto in this.detalles.Detalles)
             {
                 mIvaProducto = (producto.Precio * detalles.Cliente.Porc) / 100;
@@ -80,6 +118,9 @@ namespace Entidades
             return str.ToString();
         }
 
+        /// <summary>
+        /// Guarda la factura con su Nro de cliente en un archivo txt en una carpeta especifica.
+        /// </summary>
         public void GuardarFactura()
         {
             Texto texto = new Texto();
@@ -87,19 +128,28 @@ namespace Entidades
             texto.Guardar("Facturas\\Cliente_" + this.Pedido.Cliente.NroCliente + ".txt", this.ToString());
         }
 
+        /// <summary>
+        /// Guarda el reporte de la factura en un archivo txt en una carpeta especifica.
+        /// </summary>
         public void GuardarOperatoria()
         {
             Texto texto = new Texto();
             string opString = String.Format("Reportes\\" + fechaEmision.Day + "-" + fechaEmision.Month + "-" + fechaEmision.Year + ".txt");
             texto.Guardar(opString, this.formatoOperatoria());
         }
-
+        
+        /// <summary>
+        /// Guarda la factura en un archivo Xml para su posterior uso en una carpeta especifica.
+        /// </summary>
         public void GuardarXml()
         {
             Xml<Factura> guardar = new Xml<Factura>();
             guardar.Guardar("Datos\\Factura.Xml", this);
         }
 
+        /// <summary>
+        /// Lee la factura en un archivo Xml de una carpeta especifica.
+        /// </summary>
         public static Factura LeerXml()
         {
             Factura factura = new Factura();
@@ -109,6 +159,11 @@ namespace Entidades
             return factura;
         }
 
+
+        /// <summary>
+        /// Prepara la factura en formato operatoria.
+        /// </summary>
+        /// <returns>Un Obj StringBuilder con el formato de operatoria del dia.</returns>
         private string formatoOperatoria()
         {
             StringBuilder str = new StringBuilder();
@@ -119,31 +174,47 @@ namespace Entidades
 
             return str.ToString();
         }
+        #endregion
 
+
+        #region Propiedades
+        /// <summary>
+        /// Propiedad de lectura y escritura para el pedido.
+        /// </summary>
         public Pedido Pedido
         {
             get { return detalles; }
             set { detalles = value; }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura para la fecha de emision.
+        /// </summary>
         public DateTime FechaEmision
         {
             get { return fechaEmision; }
             set { fechaEmision = value; }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura para el Numero de factura.
+        /// </summary>
         public int NroFactura
         {
             get { return nroFactura; }
             set { nroFactura = value; }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura para la letra de la factura
+        /// </summary>
         public Letra Letra
         {
             get { return letra; }
             set { letra = value; }
         }
 
+        #endregion
 
 
     }

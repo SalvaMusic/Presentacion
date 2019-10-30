@@ -4,3 +4,9 @@ C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Archivos\o
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Archivos\obj\Debug\Archivos.dll
 C:\Users\xxxxx\Documents\Salva\Programacion_Laboratorio_2\DevProducto\Archivos\obj\Debug\Archivos.pdb
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Archivos\bin\Debug\Archivos.dll
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Archivos\bin\Debug\Archivos.pdb
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Archivos\obj\Debug\Archivos.dll
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\DevProducto\Archivos\obj\Debug\Archivos.pdb

@@ -111,7 +111,6 @@
             this.Name = "FormAccesoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceco Clientes";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAccesoCliente_FormClosing);
             this.Load += new System.EventHandler(this.FormAccesoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
