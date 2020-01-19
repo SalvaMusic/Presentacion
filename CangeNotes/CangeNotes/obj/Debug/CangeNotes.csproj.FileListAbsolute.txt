@@ -1,0 +1,10 @@
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\bin\Debug\CangeNotes.exe.config
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\bin\Debug\CangeNotes.exe
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\bin\Debug\CangeNotes.pdb
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.csprojAssemblyReference.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.Form1.resources
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.Properties.Resources.resources
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.csproj.GenerateResource.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.csproj.CoreCompileInputs.cache
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.exe
+C:\Users\xxxxx\Documents\Salva\Repositorios\Presentacion\CangeNotes\CangeNotes\obj\Debug\CangeNotes.pdb

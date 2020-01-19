@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 15 for Windows Desktop
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CangeNotes", "CangeNotes\CangeNotes.csproj", "{49A53C3C-97E3-4819-86FD-DA9F233F8430}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49A53C3C-97E3-4819-86FD-DA9F233F8430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A53C3C-97E3-4819-86FD-DA9F233F8430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A53C3C-97E3-4819-86FD-DA9F233F8430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A53C3C-97E3-4819-86FD-DA9F233F8430}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28BB061C-1C29-40FF-B611-AA167C443E1E}
+	EndGlobalSection
+EndGlobal
